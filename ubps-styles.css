@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+#game {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#bins {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.bin {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#scanner {
+    background-color: #ffd700;
+}
+
+#safe-bin {
+    background-color: #90ee90;
+}
+
+#unsafe-bin {
+    background-color: #ff6961;
+}
+
+#mail-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.letter {
+    width: 100px;
+    height: 80px;
+    background-image: url('assets/images/ubps/envelope.png');
+    background-size: cover;
+    cursor: grab;
+}
+
+.life {
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/images/ubps/life.png');
+    background-size: cover;
+    display: inline-block;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+#restart-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
