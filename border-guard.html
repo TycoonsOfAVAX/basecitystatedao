@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Guard Game</title>
+    <link rel="stylesheet" href="assets/css/border-styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="score">SCORE: <span id="score">0</span> $WORKERS</div>
+            <div class="round">DAY: <span id="round">1</span></div>
+            <div class="lives">
+                <span>Lives </span>
+                <img src="assets/images/game/life.png" alt="Life" id="life1">
+                <img src="assets/images/game/life.png" alt="Life" id="life2">
+                <img src="assets/images/game/life.png" alt="Life" id="life3">
+            </div>
+        </div>
+        <div class="bins">
+            <div class="bin" id="scanner">Scanner</div>
+            <div class="bin" id="safe-bin">Safe Bin</div>
+            <div class="bin" id="deny-bin">Unsafe Bin</div>
+        </div>
+        <div class="passport-container" id="passport-container"></div>
+        <div class="footer">
+            <div class="timer">Time: <span id="timer">60</span>s</div>
+        </div>
+    </div>
+    <div id="game-over" class="overlay hidden">
+        <div class="overlay-content">
+            <p id="game-over-message"></p>
+            <button onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+    <div id="game-rules" class="overlay">
+        <div class="overlay-content">
+            <p>Welcome to the Border Guard Game! Your job as the diligent border guard is to check the pepes coming in to Base Nation. Drag passports to the scanner to check if they are safe. Then place them in the appropriate bin. Unsafe passports go into the Unsafe Bin and safe passports go into the Safe Bin. Be quick, the city needs a lot of workers and watch out for any scammers and FIAT loyalists trying to get into Base Nation. Letting the wrong pepe in could result in dire consequences. Good luck!</p>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <script src="assets/js/border-script.js"></script>
+</body>
+</html>
